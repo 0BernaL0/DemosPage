@@ -36,7 +36,7 @@ Todas nuestras soluciones incluyen:
 ## 📩 Contacto para Presupuestos
 ¿Te interesa alguno de estos modelos para tu negocio?
 - **WhatsApp:** [+595 971 498 445](https://wa.me/595971498445)
-- **Web Principal:** [https://tu-usuario.github.io/tu-web-principal/](https://tu-usuario.github.io/tu-web-principal/)
+- **Web Principal:** [https://0bernal.github.io/CB-SolucionesWeb/](https://0bernal0.github.io/CB-SolucionesWeb/)
 
 ---
 *Desarrollado con ❤️ por un Ingeniero en Sistemas enfocado en el crecimiento de tu negocio.*
