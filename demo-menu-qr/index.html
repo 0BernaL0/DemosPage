@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Piazza | Menú Digital</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-logo" href="#">La <span>Piazza</span></a>
+        <div class="header-info">
+          <span class="badge-open">● Abierto</span>
+          <button class="cart-btn" onclick="toggleCart()">
+            <i class="bi bi-bag-fill"></i>
+            Tu pedido
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero-banner">
+      <div class="hero-banner-content">
+        <h1>Pizzas <span>artesanales</span><br />al horno de leña</h1>
+        <p>Ingredientes frescos · Masa madre · Delivery y salón</p>
+        <div class="hero-chips">
+          <span class="hero-chip"
+            ><i class="bi bi-clock"></i> 20–35 min delivery</span
+          >
+          <span class="hero-chip"
+            ><i class="bi bi-geo-alt"></i> Asunción y alrededores</span
+          >
+          <span class="hero-chip"
+            ><i class="bi bi-whatsapp"></i> Pedí por WhatsApp</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <nav class="cat-tabs">
+      <div class="cat-tabs-inner">
+        <a href="#pizzas" class="cat-tab active">🍕 Pizzas</a>
+        <a href="#empanadas" class="cat-tab">🥟 Empanadas</a>
+        <a href="#bebidas" class="cat-tab">🥤 Bebidas</a>
+        <a href="#postres" class="cat-tab">🍮 Postres</a>
+      </div>
+    </nav>
+
+    <!-- MENU -->
+    <div class="menu-wrap">
+      <!-- PIZZAS -->
+      <div class="cat-section" id="pizzas">
+        <div class="cat-section-title">Pizzas</div>
+        <div class="cat-section-sub">
+          Masa madre, horno de leña. Tamaño grande (8 porciones).
+        </div>
+        <div class="items-grid">
+          <div class="item-card">
+            <div class="item-img">
+              <span class="emoji">🍕</span>
+              <span class="item-badge">⭐ Más pedida</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Muzzarella</div>
+              <div class="item-desc">
+                Salsa de tomate artesanal, mozzarella fresca y orégano. El
+                clásico que nunca falla.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 65.000 <small></small></div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Muzzarella', 65000, '🍕')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fff5e8">
+              <span class="emoji">🍖</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Napolitana</div>
+              <div class="item-desc">
+                Salsa de tomate, mozzarella, rodajas de tomate fresco, ajo y
+                albahaca.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 72.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Napolitana', 72000, '🍖')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #ffefea">
+              <span class="emoji">🥩</span>
+              <span class="item-badge">🔥 Especial</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Cuatro Carnes</div>
+              <div class="item-desc">
+                Jamón, pepperoni, carne molida y pollo grillado sobre base de
+                mozzarella.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 88.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Cuatro Carnes', 88000, '🥩')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #f0fff4">
+              <span class="emoji">🌿</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Vegetariana</div>
+              <div class="item-desc">
+                Pimientos, champiñones, aceitunas, cebolla morada y rúcula
+                fresca.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 70.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Vegetariana', 70000, '🌿')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fff8e8">
+              <span class="emoji">🧄</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Fugazzeta</div>
+              <div class="item-desc">
+                Doble queso mozzarella, cebolla caramelizada y ajo en aceite de
+                oliva.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 75.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Fugazzeta', 75000, '🧄')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fff0f5">
+              <span class="emoji">🍓</span>
+              <span class="item-badge">Dulce</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Nutella & Frutilla</div>
+              <div class="item-desc">
+                Base de Nutella, frutillas frescas, banana y coco rallado. Para
+                cerrar con todo.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 78.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Nutella & Frutilla', 78000, '🍓')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPANADAS -->
+      <div class="cat-section" id="empanadas">
+        <div class="cat-section-title">Empanadas</div>
+        <div class="cat-section-sub">
+          Horneadas al momento. Precio por unidad.
+        </div>
+        <div class="items-grid">
+          <div class="item-card">
+            <div class="item-img" style="background: #fff5e0">
+              <span class="emoji">🥟</span>
+              <span class="item-badge">⭐ Favorita</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Carne y Cebolla</div>
+              <div class="item-desc">
+                Relleno jugoso de carne molida, cebolla, morrón y huevo duro.
+                Masa crujiente.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 8.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Empanada Carne', 8000, '🥟')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fffbe8">
+              <span class="emoji">🧀</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Jamón y Queso</div>
+              <div class="item-desc">
+                Jamón cocido y queso derretido. El clásico que gusta a todos,
+                ideal para niños.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 7.500</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Empanada Jamón y Queso', 7500, '🧀')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #f0f8ff">
+              <span class="emoji">🐔</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Pollo y Verduras</div>
+              <div class="item-desc">
+                Pollo desmenuzado, choclo, morrón verde y crema. Suave y
+                sabroso.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 8.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Empanada Pollo', 8000, '🐔')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEBIDAS -->
+      <div class="cat-section" id="bebidas">
+        <div class="cat-section-title">Bebidas</div>
+        <div class="cat-section-sub">
+          Frías y naturales. Presentación individual.
+        </div>
+        <div class="items-grid">
+          <div class="item-card">
+            <div class="item-img" style="background: #fff3e0">
+              <span class="emoji">🥤</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Coca-Cola 500ml</div>
+              <div class="item-desc">
+                Clásica, Zero o Light. Bien fría directo de la heladera.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 8.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Coca-Cola', 8000, '🥤')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fff8e8">
+              <span class="emoji">🍊</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Jugo Natural</div>
+              <div class="item-desc">
+                Naranja, mango o maracuyá. Exprimido al momento, sin azúcar
+                agregada.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 12.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Jugo Natural', 12000, '🍊')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #f5f5ff">
+              <span class="emoji">💧</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Agua Mineral</div>
+              <div class="item-desc">Con o sin gas, 600ml. Marca Vital.</div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 5.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Agua Mineral', 5000, '💧')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTRES -->
+      <div class="cat-section" id="postres">
+        <div class="cat-section-title">Postres</div>
+        <div class="cat-section-sub">El toque dulce para cerrar tu pedido.</div>
+        <div class="items-grid">
+          <div class="item-card">
+            <div class="item-img" style="background: #fff5e8">
+              <span class="emoji">🍮</span>
+              <span class="item-badge">⭐ Estrella</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Tiramisú</div>
+              <div class="item-desc">
+                Receta italiana tradicional, con café espresso, mascarpone y
+                cacao amargo.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 22.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Tiramisú', 22000, '🍮')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-img" style="background: #fff0f0">
+              <span class="emoji">🍫</span>
+            </div>
+            <div class="item-body">
+              <div class="item-name">Brownie con helado</div>
+              <div class="item-desc">
+                Brownie de chocolate caliente con una bocha de helado de
+                vainilla y salsa de caramelo.
+              </div>
+              <div class="item-footer">
+                <div class="item-price">Gs. 18.000</div>
+                <button
+                  class="add-btn"
+                  onclick="addItem(this, 'Brownie con helado', 18000, '🍫')"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /menu-wrap -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>
+        © 2026
+        <strong style="color: rgba(255, 255, 255, 0.6)">La Piazza</strong> ·
+        Menú digital desarrollado por
+        <a href="https://0bernal0.github.io/CB-SolucionesWeb/index.html"
+          >CB – Soluciones Web</a
+        >
+      </p>
+    </footer>
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- CART DRAWER -->
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h3>Tu pedido 🛒</h3>
+        <button class="close-cart" onclick="toggleCart()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+          <i class="bi bi-bag"></i>
+          <p>Tu pedido está vacío.<br />¡Elegí algo rico!</p>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Total estimado</span>
+          <strong id="cartTotal">Gs. 0</strong>
+        </div>
+        <p class="cart-note">
+          Los precios pueden variar. El restaurante confirmará el total final.
+        </p>
+        <a href="#" class="btn-pedido" id="whatsappBtn" target="_blank">
+          <i class="bi bi-whatsapp fs-5"></i>
+          Enviar pedido por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

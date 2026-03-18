@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OdontoClinic | Odontología Avanzada</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-heart-pulse-fill me-2" style="color: var(--teal)"></i
+          >OdontoClinic
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">La Doctora</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonios">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-cta" href="#citas">Reservar Turno</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a
+                class="nav-link"
+                style="font-size: 0.75rem; color: var(--muted) !important"
+                href="https://0bernal0.github.io/CB-SolucionesWeb/index.html"
+                >← CB Soluciones Web</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-dots"></div>
+      <div class="hero-blob"></div>
+      <div class="hero-blob2"></div>
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 hero-content">
+            <div class="hero-eyebrow fu fu-1">
+              <i class="bi bi-geo-alt-fill"></i> Asunción, Paraguay
+            </div>
+            <h1 class="hero-title fu fu-2">
+              Tu sonrisa en <span>manos expertas.</span>
+            </h1>
+            <p class="hero-sub fu fu-3">
+              Odontología avanzada con tecnología de última generación y
+              atención personalizada. Cuidamos tu salud bucal con el trato que
+              merecés.
+            </p>
+            <div class="d-flex flex-wrap gap-3 fu fu-4">
+              <a href="#citas" class="btn-hero-primary">
+                <i class="bi bi-calendar-check"></i> Reservar turno
+              </a>
+              <a href="#servicios" class="btn-hero-secondary">
+                Ver servicios <i class="bi bi-arrow-down"></i>
+              </a>
+            </div>
+            <div class="hero-stats fu fu-4">
+              <div>
+                <div class="stat-num">+12</div>
+                <div class="stat-label">Años de experiencia</div>
+              </div>
+              <div>
+                <div class="stat-num">+2.000</div>
+                <div class="stat-label">Pacientes atendidos</div>
+              </div>
+              <div>
+                <div class="stat-num">98%</div>
+                <div class="stat-label">Pacientes satisfechos</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM CARD -->
+          <div class="col-lg-6 fu fu-3" id="citas">
+            <div class="hero-form-card">
+              <div class="card-tag">
+                <i class="bi bi-calendar2-heart"></i> Agendamiento online
+              </div>
+              <h4>Reserva tu evaluación gratuita</h4>
+              <p>
+                Completá el formulario y te contactamos por WhatsApp para
+                confirmar tu turno.
+              </p>
+              <form id="agendamientoForm">
+                <div class="mb-3">
+                  <label class="form-label">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="f_nombre"
+                    class="form-control"
+                    placeholder="Ej. María Pérez"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Teléfono / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="f_tel"
+                    class="form-control"
+                    placeholder="+595 9XX XXX XXX"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tratamiento de interés</label>
+                  <select id="f_servicio" class="form-select">
+                    <option>Consulta general</option>
+                    <option>Limpieza dental</option>
+                    <option>Ortodoncia (frenillos)</option>
+                    <option>Blanqueamiento dental</option>
+                    <option>Implantes dentales</option>
+                    <option>Urgencia / Dolor</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-6 mb-3">
+                    <label class="form-label">Fecha preferida</label>
+                    <input
+                      type="date"
+                      id="f_fecha"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label class="form-label">Turno</label>
+                    <select id="f_turno" class="form-select">
+                      <option>Mañana (08:00–12:00)</option>
+                      <option>Tarde (14:00–18:00)</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn-submit">
+                  <i class="bi bi-whatsapp"></i> Solicitar turno por WhatsApp
+                </button>
+                <p class="form-note">
+                  <i class="bi bi-shield-check me-1"></i>Tus datos son
+                  confidenciales. Respondemos en menos de 2 horas.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <div class="section-eyebrow">Nuestros servicios</div>
+            <h2 class="section-title">
+              Atención integral para toda la familia
+            </h2>
+          </div>
+          <div class="col-lg-6 d-flex align-items-end">
+            <p class="section-desc">
+              Contamos con equipos de última generación para garantizar
+              tratamientos precisos, seguros y sin dolor.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon"><i class="bi bi-stars"></i></div>
+              <h5>Limpieza Dental</h5>
+              <p>
+                Profilaxis profesional con ultrasonido para eliminar sarro y
+                manchas. Recomendada cada 6 meses para mantener una boca sana.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon"><i class="bi bi-emoji-smile"></i></div>
+              <h5>Ortodoncia</h5>
+              <p>
+                Brackets metálicos, cerámicos y alineadores transparentes.
+                Corregimos la posición de tus dientes con seguimiento mensual.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon">
+                <i class="bi bi-brightness-high"></i>
+              </div>
+              <h5>Blanqueamiento</h5>
+              <p>
+                Blanqueamiento LED en consultorio con resultados visibles desde
+                la primera sesión. Hasta 8 tonos más blanco.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon"><i class="bi bi-shield-plus"></i></div>
+              <h5>Implantes Dentales</h5>
+              <p>
+                Reemplazamos dientes faltantes con implantes de titanio de alta
+                durabilidad. Resultado natural y permanente.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon"><i class="bi bi-people-fill"></i></div>
+              <h5>Odontología Infantil</h5>
+              <p>
+                Atención especializada y amigable para los más pequeños.
+                Selladores, flúor y educación en higiene bucal desde temprana
+                edad.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="servicio-card">
+              <div class="servicio-icon">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h5>Urgencias</h5>
+              <p>
+                Atendemos dolores agudos, fracturas y urgencias dentales el
+                mismo día. Llamanos y te damos turno de emergencia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX BAND -->
+    <div class="parallax-band">
+      <div class="container parallax-band-content text-center">
+        <p class="parallax-quote mb-4">
+          "Tecnología sin dolor.<br />
+          <span>Tu comodidad es nuestra prioridad.</span>"
+        </p>
+        <a
+          href="#citas"
+          class="btn-hero-primary"
+          style="display: inline-flex; margin: 0 auto"
+        >
+          <i class="bi bi-calendar-check"></i> Reservar mi turno ahora
+        </a>
+      </div>
+    </div>
+
+    <!-- DIFERENCIADORES -->
+    <section id="diferenciadores">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <div class="section-eyebrow">Por qué elegirnos</div>
+            <h2 class="section-title">Una clínica comprometida con tu salud</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="diff-card">
+              <div class="diff-num">01</div>
+              <h5>Equipos de última generación</h5>
+              <p>
+                Radiografías digitales, láser dental y esterilización
+                certificada. Tecnología que garantiza precisión y seguridad en
+                cada tratamiento.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="diff-card">
+              <div class="diff-num">02</div>
+              <h5>Atención sin dolor</h5>
+              <p>
+                Utilizamos anestesia de última generación y técnicas mínimamente
+                invasivas. El miedo al dentista ya es cosa del pasado.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="diff-card">
+              <div class="diff-num">03</div>
+              <h5>Confirmación por WhatsApp</h5>
+              <p>
+                Confirmamos tu turno en minutos y te enviamos un recordatorio 24
+                horas antes. Sin filas, sin esperas innecesarias.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="diff-card">
+              <div class="diff-num">04</div>
+              <h5>Planes accesibles</h5>
+              <p>
+                Cuotas sin interés y planes de financiamiento para que nada te
+                impida cuidar tu salud bucal. Consultá nuestras opciones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE LA DOCTORA -->
+    <section id="sobre">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-4">
+            <div class="sobre-img-wrap">
+              <div class="sobre-placeholder">
+                <i class="bi bi-person-circle"></i>
+                <span>Foto de la doctora</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="section-eyebrow">La Doctora</div>
+            <h2 class="section-title">Dra. Valeria Montiel</h2>
+            <p
+              style="
+                color: var(--muted);
+                line-height: 1.8;
+                margin-bottom: 1.75rem;
+              "
+            >
+              Odontóloga egresada de la Universidad Nacional de Asunción con más
+              de 12 años de experiencia clínica. Especialista en ortodoncia y
+              estética dental, brinda a cada paciente una atención personalizada
+              basada en la escucha, la confianza y el uso de técnicas de
+              vanguardia. Ha atendido a más de 2.000 pacientes en Asunción y el
+              área metropolitana.
+            </p>
+            <div>
+              <div class="credencial">
+                <i class="bi bi-mortarboard-fill"></i>
+                <div>
+                  <strong
+                    >Odontóloga — Universidad Nacional de Asunción (UNA)</strong
+                  >
+                  <span>Egresada con mención de honor, 2012</span>
+                </div>
+              </div>
+              <div class="credencial">
+                <i class="bi bi-award-fill"></i>
+                <div>
+                  <strong
+                    >Especialización en Ortodoncia y Estética Dental</strong
+                  >
+                  <span>Instituto de Posgrado — São Paulo, Brasil</span>
+                </div>
+              </div>
+              <div class="credencial">
+                <i class="bi bi-patch-check-fill"></i>
+                <div>
+                  <strong>Miembro del Círculo Odontológico del Paraguay</strong>
+                  <span>Matrícula profesional vigente</span>
+                </div>
+              </div>
+              <div class="credencial">
+                <i class="bi bi-translate"></i>
+                <div>
+                  <strong>Atención en español, guaraní y portugués</strong>
+                  <span>Para mayor comodidad de todos los pacientes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <div class="container">
+        <div class="section-eyebrow">Testimonios</div>
+        <h2 class="section-title mb-5">Lo que dicen nuestros pacientes</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testi-card">
+              <div class="testi-mark">"</div>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">
+                Llevaba años postergando ir al dentista por miedo. La Dra.
+                Montiel me hizo sentir en confianza desde el primer momento. El
+                tratamiento fue rápido y sin ningún dolor. ¡Ya recomendé la
+                clínica a toda mi familia!
+              </p>
+              <div class="testi-author">Laura Benítez</div>
+              <div class="testi-role">Paciente de ortodoncia · Asunción</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testi-card">
+              <div class="testi-mark">"</div>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">
+                Hice el blanqueamiento y los resultados superaron mis
+                expectativas. El turno lo saqué por WhatsApp y en menos de una
+                hora me confirmaron. Muy profesional todo, la infraestructura es
+                moderna y la atención excelente.
+              </p>
+              <div class="testi-author">Diego Amarilla</div>
+              <div class="testi-role">Blanqueamiento · San Lorenzo</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testi-card">
+              <div class="testi-mark">"</div>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">
+                Traigo a mis dos hijos desde que abrieron. La doctora tiene una
+                paciencia increíble con los chicos, les explica todo y los hace
+                sentir cómodos. Es la única clínica donde mis hijos no protestan
+                para ir al dentista.
+              </p>
+              <div class="testi-author">Patricia Giménez</div>
+              <div class="testi-role">
+                Odontología infantil · Fernando de la Mora
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="section-eyebrow" style="justify-content: center">
+              Contacto
+            </div>
+            <h2 class="section-title">¿Tenés alguna consulta?</h2>
+            <p class="section-desc mx-auto" style="max-width: 480px">
+              Estamos disponibles de lunes a sábado. También podés escribirnos
+              por WhatsApp en cualquier momento.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-md-5">
+            <div class="info-item">
+              <i class="bi bi-geo-alt-fill"></i
+              ><span>Av. España 1234, Centro, Asunción</span>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-clock-fill"></i
+              ><span>Lun a Sáb: 08:00 – 18:00</span>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-telephone-fill"></i><span>+595 981 123 456</span>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-envelope-fill"></i
+              ><span>contacto@odontoclinic.com.py</span>
+            </div>
+            <a
+              href="https://wa.me/595981123456"
+              target="_blank"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background: #25d366;
+                color: #fff;
+                border-radius: 10px;
+                padding: 15px;
+                font-weight: 600;
+                text-decoration: none;
+                margin-top: 1rem;
+                transition: background 0.2s;
+              "
+              onmouseover="this.style.background = '#1ebe5d'"
+              onmouseout="this.style.background = '#25D366'"
+            >
+              <i class="bi bi-whatsapp fs-5"></i> Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p class="text-center">
+          Copyright &copy;
+          <strong style="color: rgba(255, 255, 255, 0.5)">OdontoClinic</strong>
+          2026 &nbsp;|&nbsp; Desarrollado por
+          <a href="https://0bernal0.github.io/CB-SolucionesWeb/index.html"
+            >CB – Soluciones Web</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("agendamientoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("f_nombre").value.trim();
+          const tel = document.getElementById("f_tel").value.trim();
+          const servicio = document.getElementById("f_servicio").value;
+          const fecha = document.getElementById("f_fecha").value;
+          const turno = document.getElementById("f_turno").value;
+
+          if (!nombre || !tel || !fecha) return;
+
+          const msg =
+            `🦷 *Nueva solicitud de turno — OdontoClinic*\n\n` +
+            `👤 *Paciente:* ${nombre}\n` +
+            `📱 *Teléfono:* ${tel}\n` +
+            `🔧 *Tratamiento:* ${servicio}\n` +
+            `📅 *Fecha preferida:* ${fecha}\n` +
+            `🕐 *Turno:* ${turno}\n\n` +
+            `_Por favor confirmar disponibilidad y enviar datos de la clínica._`;
+
+          const phone = "595981123456";
+          window.open(
+            `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
+            "_blank",
+          );
+        });
+    </script>
+  </body>
+</html>
