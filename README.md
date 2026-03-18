@@ -1,42 +1,38 @@
-# DemosPage
-# 🚀 Demos de Soluciones Web - CB Soluciones
+# 🚀 DemosPage - CB Soluciones Web
 
-Este repositorio contiene una selección de modelos de sitios web diseñados para diferentes necesidades de negocio. Cada demo está optimizada para ser **rápida, segura y 100% adaptable a dispositivos móviles**.
+Repositorio de demos de sitios web diseñados para diferentes rubros y necesidades de negocio. Cada demo es rápida, mobile-friendly y lista para adaptar a cualquier cliente.
 
----
-
-## 📂 Catálogo de Demos
-
-### 1. Modelo: Servicio Profesional 💼
-Ideal para abogados, consultores, contadores o freelancers que buscan transmitir autoridad.
-* **Enfoque:** Generación de confianza y agendamiento de citas.
-* **[🔗 Ver Demo Online](https://tu-usuario.github.io/tu-repo-demos/servicio-profesional/)**
-
-### 2. Modelo: Landing Page Informativa 📘
-Perfecta para productos específicos, lanzamientos o instituciones que necesitan presentar mucha información de forma clara.
-* **Enfoque:** Claridad visual y navegación fluida.
-* **[🔗 Ver Demo Online](https://tu-usuario.github.io/tu-repo-demos/informativa/)**
-
-### 3. Modelo: Venta Directa / Conversión 🎯
-Diseñada para negocios que necesitan que el cliente tome una acción inmediata (comprar, pedir presupuesto o contactar).
-* **Enfoque:** Botones de acción (CTA) estratégicos y alto impacto visual.
-* **[🔗 Ver Demo Online](https://tu-usuario.github.io/tu-repo-demos/venta-directa/)**
+**🔗 Sitio principal:** [https://0bernal0.github.io/CB-SolucionesWeb/](https://0bernal0.github.io/CB-SolucionesWeb/)
 
 ---
 
-## 🛠️ Características Técnicas (Estándar de Calidad)
-Todas nuestras soluciones incluyen:
-- **Optimización de Carga:** Imágenes en formato WebP para máxima velocidad.
-- **Responsive Design:** Visualización perfecta en celulares, tablets y PCs.
-- **SEO Ready:** Estructura preparada para posicionar en Google.
-- **Integración con WhatsApp:** Botones de contacto directo configurados.
+## 📂 Demos Disponibles
+
+### 1. Odontoclinic — Clínica Odontológica 🦷
+Para clínicas y consultorios. Mostrá tus servicios, tu equipo y generá confianza para que el paciente te elija antes de llamar.
+- **[🔗 Ver Demo](https://0bernal0.github.io/DemosPage/demo-clinica/index.html)**
+
+### 2. TecnoSoluciones — Servicios Profesionales 💼
+Para técnicos, contadores y profesionales independientes. Tu servicio bien presentado para que el cliente te contacte directamente.
+- **[🔗 Ver Demo](https://0bernal0.github.io/DemosPage/demo-servicios/index.html)**
+
+### 3. La Piazza — Menú QR para Restaurantes 🍕
+Para restaurantes y puestos de comida. Menú digital con QR — sin impresiones, sin llamadas, los pedidos llegan directo por WhatsApp.
+- **[🔗 Ver Demo](https://0bernal0.github.io/DemosPage/demo-menu-qr/index.html)**
+
+### 4. TecnoHogar — Landing de Venta Directa 🎯
+Para vender un producto específico. Diseñada para convertir visitas en consultas, ideal para acompañar campañas en redes sociales.
+- **[🔗 Ver Demo](https://0bernal0.github.io/DemosPage/demo-venta-directa/index.html)**
+
+### 5. Dr. Vera y Asociados — Estudio Jurídico ⚖️
+Para abogados y estudios jurídicos. Presentá tu especialidad y trayectoria para que el cliente llegue listo para contratarte.
+- **[🔗 Ver Demo](https://0bernal0.github.io/DemosPage/demo-abogado/index.html)**
 
 ---
 
-## 📩 Contacto para Presupuestos
-¿Te interesa alguno de estos modelos para tu negocio?
-- **WhatsApp:** [+595 971 498 445](https://wa.me/595971498445)
-- **Web Principal:** [https://0bernal.github.io/CB-SolucionesWeb/](https://0bernal0.github.io/CB-SolucionesWeb/)
+## 🛠️ Características Técnicas
 
----
-*Desarrollado con ❤️ por un Ingeniero en Sistemas enfocado en el crecimiento de tu negocio.*
+Todos los demos incluyen:
+
+- **WebP** — imágenes optimizadas para carga rápida.
+- **Responsive Design** — visualización perfe
